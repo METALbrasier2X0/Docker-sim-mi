@@ -21,3 +21,13 @@ docker-compose exec php php bin/console doctrine:schema:create
 ```
 
 * Visitez *localhost*
+
+## FAQ
+
+### `docker-compose build` me retourne une erreur.
+
+N'oubliez pas de libérer le port 80 (`systemctl stop apache2` sur ubuntu)
+
+### `docker-compose exec php php bin/console doctrine:schema:create` m'affiche `SQLSTATE[HY000] [2002] Connection refused`
+
+Vérifiez que les infos de la base de données dans le fichier .env (à la racine) soient les mêmes que dans l'appli symfony (apps/\<nom de l'appli\>/.env).

@@ -28,6 +28,7 @@ docker-compose exec php php bin/console doctrine:schema:create
 ## Quelques commandes
 
 * `docker-compose stop`: arréter les conteneurs
+* `docker system prune -a`: permet de supprimer tout ce qui n'est pas relié à un conteneur qui tourne (libère beaucoup de place!)
 
 ## FAQ
 

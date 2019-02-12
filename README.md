@@ -22,7 +22,7 @@ docker-compose exec php composer install
 docker-compose exec php php bin/console doctrine:schema:create
 ```
 
-* Visitez *localhost* pour accéder à l'appli
+* Visitez *localhost:80* pour accéder à l'appli
 * *localhost:8181* pour PHPMyAdmin
 
 ## Quelques commandes

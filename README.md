@@ -7,6 +7,8 @@
 
 ## INSTALLATION
 
+*Note: les deux premières instructions peuvent être réalisées en executant auto_clone.sh*
+
 * Créer les dossiers *apps* et *bin*
 * Dans le dossier *apps*, clonner l'appli symfony
 * Renommer .env.dist en .env et remplir les infos pour la base de donnée

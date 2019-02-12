@@ -11,7 +11,7 @@
 
 * Créer les dossiers *apps* et *bin*
 * Dans le dossier *apps*, clonner l'appli symfony
-* Renommer .env.dist en .env et remplir les infos pour la base de donnée
+* A la racine, renommer .env.dist en .env et remplir les infos pour la base de donnée
 * Dans le .env de l'appli symfony, changer la ligne avec les bonnes infos: `DATABASE_URL=mysql://MYSQL_USER:MYSQL_PASSWORD@mysql:3306/MYSQL_DATABASE` **NE PAS OUBLIER DE CHANGER 127.0.0.1 PAR MYSQL**
 * A la racine, executez:
 
@@ -22,7 +22,8 @@ docker-compose exec php composer install
 docker-compose exec php php bin/console doctrine:schema:create
 ```
 
-* Visitez *localhost*
+* Visitez *localhost* pour accéder à l'appli
+* *localhost:8181* pour PHPMyAdmin
 
 ## Quelques commandes
 

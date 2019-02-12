@@ -2,6 +2,7 @@ version:  '3.7'
 services:
   mysql:
     image: mysql:5.7
+    container_name: mysql
     restart: on-failure
     environment:
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
@@ -33,4 +34,18 @@ services:
     restart: on-failure
     env_file:
       - .env
+  
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    links:
+      - mysql
+    ports:
+      - 8181:80
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - PMA_HOST=mysql
+
 

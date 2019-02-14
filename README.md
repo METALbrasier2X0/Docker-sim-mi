@@ -29,9 +29,18 @@ docker-compose exec php php bin/console assets:install --symlink public/
 ## Quelques commandes
 
 * `docker-compose stop`: arréter les conteneurs
+* `docker-compose rm`: supprimer les conteneurs arrétés
 * `docker system prune -a`: permet de supprimer tout ce qui n'est pas relié à un conteneur qui tourne (libère beaucoup de place!)
 
 ## FAQ
+
+### Comment mettre à jour ?
+
+```bash
+docker-compose stop
+docker-compose rm
+```
+Puis recommencer les étapes d'installations
 
 ### `docker-compose up -d` me retourne `Error starting userland proxy: listen tcp 0.0.0.0:80: bind: address already in use`
 
@@ -40,3 +49,7 @@ N'oubliez pas de libérer le port 80 (`systemctl stop apache2` sur ubuntu)
 ### `docker-compose exec php php bin/console doctrine:schema:create` m'affiche `SQLSTATE[HY000] [2002] Connection refused`
 
 Vérifiez que les infos de la base de données dans le fichier .env (à la racine) soient les mêmes que dans l'appli symfony (apps/\<nom de l'appli\>/.env).
+
+### Le nom du dossier qui contient le project symfony a un nom différent
+
+Dans le .env de Docker, remplacer la valeur de APP_NAME par le bon nom.

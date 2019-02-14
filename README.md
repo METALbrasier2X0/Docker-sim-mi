@@ -16,11 +16,7 @@
 * A la racine, executez:
 
 ```bash
-docker-compose build
-docker-compose up -d
-docker-compose exec php composer install
-docker-compose exec php php bin/console doctrine:schema:create
-docker-compose exec php php bin/console assets:install --symlink public/
+make install
 ```
 
 * Visitez *localhost:80* pour accéder à l'appli
@@ -28,8 +24,8 @@ docker-compose exec php php bin/console assets:install --symlink public/
 
 ## Quelques commandes
 
-* `docker-compose stop`: arréter les conteneurs
-* `docker-compose rm`: supprimer les conteneurs arrétés
+* `make stop`: arréter les conteneurs
+* `make rm`: supprimer les conteneurs arrétés
 * `docker system prune -a`: permet de supprimer tout ce qui n'est pas relié à un conteneur qui tourne (libère beaucoup de place!)
 
 ## FAQ
@@ -37,8 +33,9 @@ docker-compose exec php php bin/console assets:install --symlink public/
 ### Comment mettre à jour ?
 
 ```bash
-docker-compose stop
-docker-compose rm
+make stop
+make rm
+make rebuild
 ```
 Puis recommencer les étapes d'installations
 

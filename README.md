@@ -47,6 +47,14 @@ N'oubliez pas de libérer le port 80 (`systemctl stop apache2` sur ubuntu)
 
 Vérifiez que les infos de la base de données dans le fichier .env (à la racine) soient les mêmes que dans l'appli symfony (apps/\<nom de l'appli\>/.env).
 
+### Je ne vois pas le fichier .env.dist !
+
+Avez-vous activé l'option "afficher les fichiers cachés" ?
+
 ### Le nom du dossier qui contient le project symfony a un nom différent
 
 Dans le .env de Docker, remplacer la valeur de APP_NAME par le bon nom.
+
+### J'ai besoin d'aide avec git ou Docker !
+
+https://gitlab-ce.iut.u-bordeaux.fr/sim_mi/help

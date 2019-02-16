@@ -6,6 +6,9 @@ install:
 	$(COMPOSE) exec php php bin/console doctrine:schema:create
 	$(COMPOSE) exec php php bin/console assets:install --symlink public/
 
+down:
+	$(COMPOSE) down
+
 rebuild:
 	$(COMPOSE) up -d --build php nginx
 up: 

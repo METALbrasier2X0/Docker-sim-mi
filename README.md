@@ -33,8 +33,7 @@ make install
 ### Comment mettre à jour ?
 
 ```bash
-make stop
-make rm
+make down
 make rebuild
 ```
 Puis recommencer les étapes d'installations

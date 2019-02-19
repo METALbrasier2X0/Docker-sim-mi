@@ -38,6 +38,10 @@ make rebuild
 ```
 Puis recommencer les étapes d'installations
 
+### Comment executer une commande sur le projet symfony ?
+
+`docker-compose exec php {commande}`
+
 ### `docker-compose up -d` me retourne `Error starting userland proxy: listen tcp 0.0.0.0:80: bind: address already in use`
 
 N'oubliez pas de libérer le port 80 (`systemctl stop apache2` sur ubuntu)
